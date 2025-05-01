@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farz Biodata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      padding: 3rem 1rem;
+      text-align: center;
+      color: white;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header h1 {
+      margin-top: 1rem;
+      font-size: 2.5rem;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeInUp 1s forwards;
+    }
+    section:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #007acc;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 1rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #007acc;
+      color: white;
+    }
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .company-card, .degree-card {
+      flex: 1 1 30%;
+      background: white;
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .company-card img, .degree-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 1rem;
+    }
+    .company-card a, .degree-card a {
+      color: #007acc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .company-card a:hover, .degree-card a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin: auto;
+    }
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .carousel-slide {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 50%;
+    }
+    .prev {
+      left: 10px;
+    }
+    .next {
+      right: 10px;
+    }
+
+    /* Mobile and tablet responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .company-card, .degree-card {
+        flex: 1 1 100%;
+      }
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+      .prev, .next {
+        font-size: 1.5rem;
+        padding: 8px;
+      }
+    }
+
+    /* Smaller screens */
+    @media (max-width: 480px) {
+      header img {
+        width: 120px;
+        height: 120px;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .gallery img {
+        height: 150px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="/images/profile_cropped.png" alt="Profile Photo">
+    <h1>Farzeen Ahmed</h1>
+    <p>Senior Software Developer | Fitness Enthusiast | Family-Oriented</p>
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <div class="card">
+      <p>Software Developer & DevOps Engineer with MERN Stack and cloud expertise.</p> 
+      <p>CPD-certified fitness trainer with 7+ years’ experience.</p>
+      <p>Passionate about fitness, personal development, photography, and travel.</p>
+      <!-- <p><strong>Date of Birth:</strong> 28 Aug 2000</p> -->
+    </div>
+  </section>
+
+  <section>
+    <h2>Work & Qualification</h2>
+    <div class="cards-container">
+      <div class="company-card">
+        <img src="/images/infomatics_logo.jpeg" alt="Company Logo">
+        <h3>Infomatics Corp</h3>
+        <p>Senior Software Developer</p>
+        <a href="https://www.infomaticscorp.com" target="_blank">Visit Website</a>
+      </div>
+      <div class="degree-card">
+        <img src="/images/aimit_logo.png" alt="College Logo">
+        <h3>MCA</h3>
+        <p>AIMIT</p>
+        <a href="https://www.aimit.edu.in" target="_blank">Visit Website</a>
+      </div>
+      <div class="degree-card">
+        <img src="/images/sdm_logo.jpeg" alt="College Logo">
+        <h3>BCA</h3>
+        <p>SDMCBM</p>
+        <a href="https://sdm.ac.in/" target="_blank">Visit Website</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Photo Gallery</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <img src="/images/IMG_1155.JPG" alt="Photo 1" class="carousel-slide">
+        <img src="/images/IMG_7439.JPG" alt="Photo 2" class="carousel-slide">
+        <img src="/images/IMG_8579.JPG" alt="Photo 3" class="carousel-slide">
+        <img src="/images/IMG_9611.JPG" alt="Photo 4" class="carousel-slide">
+      </div>
+      <button onclick="moveSlide(-1)" class="prev">&#10094;</button>
+      <button onclick="moveSlide(1)" class="next">&#10095;</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Family Background</h2>
+    <div class="card">
+      <p><strong>Zafar Ahmed</strong> - Elder Brother<br>
+         <strong>Position:</strong> Operations Manager, ARM Group of Companies, UAE<br>
+         <strong>Family:</strong> Married with 2 kids</p>
+          <br>
+      <p><strong>Fawaz Ahmed</strong> - Elder Brother<br>
+         <strong>Position:</strong> Technical Team Lead, Dubai Petroleum, UAE<br>
+         <strong>Family:</strong> Married with 1 kid</p>
+          <br>
+      <p><strong>Unaisa Begum</strong> - Elder Sister<br>
+         <strong>Position:</strong> Senior Software Engineer, Cognizant, India<br>
+         <strong>Family:</strong> Married with 1 kid</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lifestyle & Values</h2>
+    <div class="card">
+      <p>My family and I strongly adhere to Islamic values, which form the foundation of our personal and professional lives. <br> We prioritize maintaining a healthy and disciplined lifestyle, focusing on fitness and well-being. <br> I believe in fostering a positive work-life balance and respecting traditions while embracing modernity to stay adaptable and forward-thinking.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Personal Details</h2>
+    <div class="card">
+      <p><strong>Date of Birth:</strong> 28 Aug 2000</p> <!-- Add your DOB here -->
+      <p><strong>Nationality:</strong> Indian</p> <!-- Optional -->
+      <p><strong>Languages Spoken:</strong> Urdu, English, Hindi, Kannada</p> <!-- Optional -->
+    </div>
+  </section>
+  
+  
+
+  <section>
+    <h2>Contact</h2>
+    <div class="card">
+      <p><strong>Phone:</strong> +91-9513782975</p>
+      <p><strong>Email:</strong> afarzeen50@gmail.com</p>
+      <p><strong>Location:</strong> Mangalore, India</p>
+      <p><strong>Personal Portfolio:</strong> <a href="https://farzeens-portfolio.netlify.app/" target="_blank">farzeens-portfolio.netlify.app</a></p>
+      <p><strong>LinkedIn:</strong> 
+        <a href="https://www.linkedin.com/in/farzeen-ahmed/" target="_blank">
+          <img src="/images/linkedin.png" alt="LinkedIn Logo" style="width: 20px; vertical-align: middle; margin-left: 5px;" />
+          linkedin.com/in/farzeen-ahmed
+        </a>
+      </p>
+    </div>
+  </section>
+  
+
+  <footer>
+    <p>Made with ❤️ by Farzeen Ahmed</p>
+  </footer>
+
+  <script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+      const slides = document.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
+      currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
+      const carousel = document.querySelector('.carousel');
+      const slideWidth = slides[0].clientWidth;
+      carousel.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+    }
+
+    setInterval(() => {
+      moveSlide(1);
+    }, 3000);
+  </script>
+</body>
+</html>
